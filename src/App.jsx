@@ -18,12 +18,13 @@ function App() {
   }
   return (
     <>
-     <div className="card">
-      <input type='password' 
-      placeholder='digite aqui' 
-      onChange={handleTexto}/>
-        <button onClick={handleClick}>Clique Aqui</button>
-        {texto}
+    <div className='container'>
+    <div><h1>CHECKLIST</h1></div>
+    <div className='card1'><input type='text' 
+                 placeholder='adicionar tarefa' 
+                  onChange={handleTexto}/>
+             <button onClick={handleClick}>Clique Aqui</button></div>
+    <div className='card2'></div>
       </div>
     </>
   )
