@@ -2,23 +2,24 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-let pessoas=[]
+let tarefas=[]
 function App() {
-  const [ count, setNome ] = useState("") 
-  const [ texto, setIdade ] = useState("") 
+  const [ materia, setMateria ] = useState("") 
+  const [ dia, setDia ] = useState("") 
 
   const handleClick = ()=> { 
-   pessoas.push({id:pessoas.length,nome, idade})
-    console.log(pessoas)
-    setNome("")
+   tarefas.push({id:tarefas.length, materia, dia})
+    console.log(tarefas)
+    setMateria("")
+    setDia("")
   }
 
-  const handleNome = (e) => {
-    setNome(e.target.value)
+  const handleMateria = (e) => {
+    setMateria(e.target.value)
   }
 
-  const handleIdade = (e) => {
-    setIdade(e.target.value)
+  const handleDia = (e) => {
+    setDia(e.target.value)
   }
   return (
     <>
@@ -26,21 +27,21 @@ function App() {
     <div><h1>CHECKLIST</h1></div>
     <div className='card1'><input type='text' 
                  placeholder='digite aqui' 
-                  onChange={handleNome}
-                  value={nome}/>
+                  onChange={handleMateria}
+                  value={materia}/>
                   <input type="number"
                   placeholder='digite aqui'
-                  onChange={handleIdade}
-                  value={idade}/>
+                  onChange={handleDia}
+                  value={dia}/>
              <button onClick={handleClick}>Clique Aqui</button>
-             {pessoas.map(e=>(
-              <div key={e.nome}>
-                <p>Nome: {e.nome}</p>
-                <p>Idade: {e.idade}</p>
+            
+    <div className='card2'>
+    {tarefas.map(e=>(
+              <div key={e.materia}>
+                <p>matéria: {e.materia}</p>
+                <p>dia: {e.dia}</p>
              </div>
              ))}
-    <div className='card2'>
-      {texto}
     </div>
       </div>
       </div>
