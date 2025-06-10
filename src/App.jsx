@@ -4,14 +4,18 @@ import viteLogo from '/vite.svg'
 import './App.css'
 let tarefas=[]
 function App() {
+  const [ descricao, setDescricao ] = useState ("")
+  const [ titulo, setTitulo ] = useState("")
   const [ materia, setMateria ] = useState("") 
   const [ dia, setDia ] = useState("") 
 
   const handleClick = ()=> { 
-   tarefas.push({id:tarefas.length, materia, dia})
+   tarefas.push({id:tarefas.length, materia, dia, descricao, titulo})
     console.log(tarefas)
     setMateria("")
     setDia("")
+    setTitulo("")
+    setDescricao("")
   }
 
   const handleMateria = (e) => {
@@ -26,14 +30,14 @@ function App() {
     <div className='container'>
     <div><h1>CHECKLIST</h1></div>
     <div className='card1'><input type='text' 
-                 placeholder='digite aqui' 
+                 placeholder='Título' 
                   onChange={handleMateria}
                   value={materia}/>
-                  <input type="number"
-                  placeholder='digite aqui'
+                  <input type="text"
+                  placeholder='Descrição'
                   onChange={handleDia}
                   value={dia}/>
-             <button onClick={handleClick}>Clique Aqui</button>
+             <button onClick={handleClick}>Adicionar Tarefa </button>
             
     <div className='card2'>
     {tarefas.map(e=>(
