@@ -7,6 +7,7 @@
   flex-direction: column;
   background-color:rgb(3, 2, 65);
   color: white;
+  font-family: "Yeseva One", serif;
 }
 
 .card1{
@@ -39,6 +40,54 @@
   color: white;
 }
 
+.card1 select {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 8px 0;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  box-sizing: border-box;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg fill='white' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
+
+.card1 select option {
+  background-color: rgb(3, 2, 65);
+  color: white;
+}
+
+
+.card2 select {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 8px 0;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  box-sizing: border-box;
+  appearance: none; 
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg fill='white' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
+
+.card2 select option {
+  background-color: rgb(3, 2, 65);
+  color: white;
+}
+
 .card3{
   height: 700px;
   width: 1000px;
@@ -50,4 +99,5 @@
   border-radius: 10px;
   box-shadow: 0px 1px 10px 1px red;
   color: white;
+  overflow-y: auto;  
 }
